@@ -1,0 +1,47 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp1.1</TargetFramework>
+    <RootNamespace>Web.TORCHx.Core.Web.API</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="build.bat" />
+    <None Remove="Octo.exe" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Controllers\Token\" />
+    <Folder Include="Controllers\User\" />
+    <Folder Include="Controllers\Sample\" />
+    <Folder Include="Attributes\" />
+    <Folder Include="Middleware\" />
+    <Folder Include="Controllers\Base\" />
+    <Folder Include="Models\" />
+    <Folder Include="Models\Results\" />
+    <Folder Include="Models\Responses\" />
+    <Folder Include="Middleware\Error\" />
+    <Folder Include="Services\" />
+    <Folder Include="Services\Json\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="1.1.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="1.1.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="1.1.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer.Design" Version="1.1.2" />
+    <PackageReference Include="Microsoft.AspNetCore" Version="1.1.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="1.1.3" />
+    <PackageReference Include="OctoPack" Version="3.6.1" />
+    <PackageReference Include="System.Text.RegularExpressions" Version="4.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.Dotnet" Version="1.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Web.Common\Web.Common.csproj" />
+    <ProjectReference Include="..\BLL\BLL.csproj" />
+  </ItemGroup>
+</Project>
